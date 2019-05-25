@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/check_box.css">
+<!-- <script src="js/price.js"></script> -->
+<title>Registration</title>
+</head>
+<body>
+
+    <!-- MultiStep Form -->
+<div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Personal Details</li>
+                    <li>Course Details</li>
+                    <li>Completed</li>
+                </ul>
+                <!-- fieldsets -->
+                <fieldset>
+                    <h2 class="fs-title">Personal Details</h2>
+                    <h3 class="fs-subtitle">Tell us something more about you</h3>
+                    
+                    <p>required</p>
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" placeholder="Last Name" required/>
+
+                    <h3>Gender <font color="red">*</font></h3>
+                    <div class="col-md-12">
+                        <label class="radio">Female
+                            <input type="radio"  name="Gender" value="female">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">Male
+                            <input type="radio" name="Gender" value="male">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">Other
+                            <input type="radio" name="Gender" value="other">
+                            <span class="checkround"></span>
+                        </label>
+                        <br><br>
+                    </div>
+                    <input type="text" name="Institution" placeholder="Institution/College Name"/>
+                    <br>
+                    <br>
+
+                    <h3>Degree/Course currently pursuing <font color="red">*</font></h3>
+                    <br>
+                    <div class="col-md-12">
+                        <label class="radio">B.TEch/BE
+                            <input type="radio" name="Degree">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">M.Tech
+                            <input type="radio" name="Degree">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">MCA/BCA
+                            <input type="radio" name="Degree">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">MBA/BBA
+                            <input type="radio" name="Degree">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">Other
+                            <input type="radio" name="Degree">
+                            <span class="checkround"></span>
+                        </label>
+                        <br><br>       
+                    </div>
+                    <input type="text" name="phone" placeholder="Phone"/>
+                    <input type="text" name="email_placement_cell" placeholder="Email id of your Placement Cell"/>
+                    
+                    <h3>Refferrer Details</h3>
+                    <input type="text" name="referrer_name" placeholder="Referrer's Name"/>
+                    <input type="rnum" name="referrer_mobile" placeholder="Referrer's Mobile Number"/>
+                    <input type="text" name="referrer_email" placeholder="Referrer's Email Id"/>
+                    <h3 aria-required="true">Are you interested in being a referrer yourself?</h3>
+                    <div class="col-md-12">
+                        <br>
+                        <label class="radio">Yes
+                            <input type="radio" name="interest" value="yes">
+                            <span class="checkround"></span>
+                        </label>
+                        <label class="radio">NO
+                            <input type="radio" name="interest" value="no">
+                            <span class="checkround"></span>
+                        </label>
+                        <br>
+                    </div>
+                    <input type="button" name="next" class="next action-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title">Course Details</h2>
+                    <h3 class="fs-subtitle">Courses you are intrested in</h3>
+                    <input type="email" name="email" placeholder="Email" required/>
+
+                    <h3>Do you have any coding experience? If yes, please select the language. <font color="red">*</font></h3>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>No Coding Experience</th>
+                            <th>Beginner</th>
+                            <th>Intermediate</th>
+                            <th>Advanced</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Java</td>
+                            <form action="">
+                                <td>
+                                    <input type="radio" name="Java" value="No_coding_Experience" >
+                                </td>
+                                <td>
+                                    <input type="radio" name="Java" value="Beginner" >
+                                </td>
+                                <td>
+                                    <input type="radio" name="Java" value="Intermediate" >
+                                </td>
+                                <td>
+                                    <input type="radio" name="Java" value="Advanced" >
+                                </td>
+                            </form>
+                          </tr>
+                          <tr>
+                            <td>C/C++</td>
+                            <td>
+                                <input type="radio" name="C++" value="No_coding_Experience">
+                            </td>
+                            <td>
+                                <input type="radio" name="C++" value="" value="Beginner">
+                            </td>
+                            <td>
+                                <input type="radio" name="C++" value="Intermediate" >
+                            </td>
+                            <td>
+                                <input type="radio" name="C++" value="Advanced">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Python</td>
+                            <td>
+                                <input type="radio" name="Python" value="No_coding_Experience">
+                            </td>
+                            <td>
+                                <input type="radio" name="Python" value="Beginner" >
+                            </td>
+                            <td>
+                                <input type="radio" name="Python" value="Intermediate">
+                            </td>
+                            <td>
+                                <input type="radio" name="Python" value="Advanced">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>R</td>
+                            <td>
+                                <input type="radio" name="R" value="No_coding_Experience">
+                            </td>
+                            <td>
+                                <input type="radio" name="R"  value="Beginner">
+                            </td>
+                            <td>
+                                <input type="radio" name="R" value="Intermediate">
+                            </td>
+                            <td>
+                                <input type="radio" name="R" value="Advanced">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br>
+                      <h3>How well-versed are you in the following?</h3>
+                      <h5>Please select a number from 1 to 5. 1 = Beginner level, 3= Intermediate level and 5 = Advanced level</h5>
+                      <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Linear Algebra</td>
+                                <form action="">
+                                    <td>
+                                        <input type="radio" name="Linear_Algebra" value="1">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Linear_Algebra" value="2">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Linear_Algebra" value="3">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Linear_Algebra" value="4">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Linear_Algebra" value="5">
+                                    </td>
+                                </form>
+                              </tr>
+                              <tr>
+                                <td>Basic probability & Statistics</td>
+                                <td>
+                                    <input type="radio" name="Basic_probability_Statistics" value="1">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Basic_probability_Statistics" value="2">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Basic_probability_Statistics" value="3">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Basic_probability_Statistics" value="4">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Basic_probability_Statistics" value="5">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>College Calculus</td>
+                                <td>
+                                    <input type="radio" name="College_Calculus" value="1">
+                                </td>
+                                <td>
+                                    <input type="radio" name="College_Calculus" value="2">
+                                </td>
+                                <td>
+                                    <input type="radio" name="College_Calculus" value="3">
+                                </td>
+                                <td>
+                                    <input type="radio" name="College_Calculus" value="4">
+                                </td>
+                                <td>
+                                    <input type="radio" name="College_Calculus" value="5">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Data Analysis</td>
+                                <td>
+                                    <input type="radio" name="Data_Analysis" value="1">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Data_Analysis" value="2">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Data_Analysis" value="3">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Data_Analysis" value="4">
+                                </td>
+                                <td>
+                                    <input type="radio" name="Data_Analysis" value="5">
+                                </td>
+                              </tr>
+                              <tr>
+                                    <td>Machine Learning</td>
+                                    <form action="">
+                                        <td>
+                                            <input type="radio" name="ML" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML" value="2">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML" value="3">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML" value="4">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML" value="5">
+                                        </td>
+                                    </form>
+                                  </tr>
+                                  <tr>
+                                    <td>Deep Learning</td>
+                                        <td>
+                                            <input type="radio" name="Deep_Learning" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Deep_Learning" value="2">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Deep_Learning" value="3">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Deep_Learning" value="4">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Deep_Learning" value="5">
+                                        </td>
+                                  </tr>
+                                  <tr>
+                                        <td>ML deployment for production</td>
+                                        <td>
+                                            <input type="radio" name="ML_deployment_production" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML_deployment_production" value="2">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML_deployment_production" value="3">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML_deployment_production" value="4">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="ML_deployment_production" value="5">
+                                        </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Buisness Analytics</td>
+                                    <td>
+                                        <input type="radio" name="Buisness_Analytics" value="1">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Buisness_Analytics" value="2">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Buisness_Analytics" value="3">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Buisness_Analytics" value="4">
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="Buisness_Analytics" value="5">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Big Data</td>
+                                        <form action="">
+                                            <td>
+                                                <input type="radio" name="Big_Data" value="1" >
+                                            </td>
+                                            <td>
+                                                <input type="radio" name="Big_Data" value="2">
+                                            </td>
+                                            <td>
+                                                <input type="radio" name="Big_Data" value="3">
+                                            </td>
+                                            <td>
+                                                <input type="radio" name="Big_Data" value="4">
+                                            </td>
+                                            <td>
+                                                <input type="radio" name="Big_Data" value="5">
+                                            </td>
+                                        </form>
+                                      </tr>
+                                      <tr>
+                                        <td>Blockchain</td>
+                                        <td>
+                                            <input type="radio" name="Blockchain" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Blockchain" value="2">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Blockchain" value="3">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Blockchain" value="4">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Blockchain" value="5">
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Natural Language Processing</td>
+                                        <td>
+                                            <input type="radio" name="NLP" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="NLP" value="2">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="NLP" value="3">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="NLP" value="4">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="NLP" value="5">
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Computer Vision</td>
+                                        <td>
+                                            <input type="radio" name="Computer_Vision" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Computer_Vision" value="2">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Computer_Vision" value="3">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Computer_Vision" value="4">
+                                        </td>
+                                        <td>
+                                            <input type="radio" name="Computer_Vision" value="5">
+                                        </td>
+                                      </tr>
+                            </tbody>
+                          </table>
+
+
+                          <br>
+                          <h3>Which of the following career path(s) do you want to pursue <font color="red">*</font> </h3>
+                          <br>
+                          <div class="col-md-12">
+                                <label class="check ">Business Data Analyst
+                                    <input type="checkbox" name="career" value="Business_Data _Analyst">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">Data Scientist
+                                    <input type="checkbox"  name="career" value="Data_Scientist">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">Machine Learning Engineer
+                                    <input type="checkbox"  name="career" value="Machine_Learning_Engineer">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">Deep Learning Engineer
+                                    <input type="checkbox"  name="career" value="Deep_Learning_Engineer">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">Big Data Analyst
+                                        <input type="checkbox" name="career" value="Big_Data_Analyst">
+                                      <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">Big Data Engineer
+                                        <input type="checkbox"  name="career" value="Big_Data_Engineer">
+                                      <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">Blockchain Developer
+                                        <input type="checkbox"  name="career" value="Blockchain_Developer">
+                                      <span class="checkmark"></span>
+                                </label>
+                            <br>
+                            </div>
+                            <br>
+                            <h3>Which mode of classes do you prefer between Online, Offline and Online + Offline? <font color="red">*</font></h3>
+                            <br>
+                            <div class="col-md-12">
+                                <br>
+                                <label class="radio">Offline (Classroom model; currently offered only in Delhi/Noida/Gurgaon, for other cities min batch size for a course is 50)
+                                    <input type="radio"  name="mode" value="Offline">
+                                    <span class="checkround"></span>
+                                </label>
+                                <label class="radio">Offline + Online
+                                    <input type="radio" name="mode" value="Offline_Online">
+                                    <span class="checkround"></span>
+                                </label>
+                                <label class="radio">Online
+                                    <input type="radio" name="mode" value="Online">
+                                    <span class="checkround"></span>
+                                </label>
+                                <br>
+                            </div>
+                            <br>
+                                <h3>If you have selected the Offline + Online, please select which city you want the offline courses in?
+                                    </h3>
+                                <br>
+                                <div class="col-md-12">
+                                    <br>
+                                    <label class="check ">Mumbai
+                                        <input type="checkbox" name="place" value="Mumbai">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Bengaluru
+                                        <input type="checkbox"  name="place" value="Bengaluru">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Kolkata
+                                        <input type="checkbox"  name="place" value="Kolkata">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Pune
+                                        <input type="checkbox" name="place" value="Pune">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Chennai
+                                        <input type="checkbox"  name="place" value="Chennai">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Hyderabad
+                                        <input type="checkbox"  name="place" value="Hyderabad">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Bhuvneshwar
+                                        <input type="checkbox" name="place" value="Bhuvneshwar">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Dehradun
+                                        <input type="checkbox"  name="place" value="Dehradun">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Chandigarh/Mohali
+                                        <input type="checkbox"  name="place" value="Chandigarh/Mohali">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Jaipur
+                                        <input type="checkbox" name="place" value="Jaipur">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Indore
+                                        <input type="checkbox"  name="place" value="Indore">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="check ">Bhopal
+                                        <input type="checkbox"  name="place" value="Bhopal">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                <br>
+                                </div> 
+                            <br> 
+                            <br> 
+                            <h3>Which of the above batch would you like to enroll in? <font color="red">*</font> </h3>
+                            <h5>Those who want ot enroll for Blockchain please only select the 2nd Batch.</h5>
+                            <div class="col-md-12">
+                                <br>
+                                <br>
+                                <label class="check ">1st Batch - 1st/2nd June
+                                    <input type="checkbox" name="batch" value="1st_batch">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="check ">2nd Batch - 10th/11th June
+                                    <input type="checkbox"  name="batch" value="2nd_batch">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <br>
+                            </div>
+                        <br><br>                 
+                            <h4>Following are the courses that we are offering and their respective fees. Please indicate your preference. Early Bird discounts are available <font color="red">*</font></h4>
+                            <br>   
+                            <div class="col-md-12">
+                                <br>
+                                <form action="" id="cakeform" onchange="calprice()">   
+                                    <label class="check ">Coding in Python
+                                            <input type="checkbox" name="is_name" value="Coding_in_Python">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Introduction to R
+                                            <input type="checkbox"  name="is_name" value="Introduction_to_R" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Machine Learning - Supervised Learning Approach
+                                            <input type="checkbox"  name="is_name" value="Machine_Learning_Supervised_Learning_Approach" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Machine Learning - Unsupervised Learning Approach
+                                            <input type="checkbox" name="is_name" value="Machine_Learning_Unsupervised_Learning_Approach" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Introduction to Data Analytics using Python
+                                            <input type="checkbox"  name="is_name" value="Introduction_to_Data_Analytics_using_Python" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Introduction to Data Analytics using R
+                                            <input type="checkbox"  name="is_name" value="Introduction_to_Data_Analytics_using_R" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Introduction to Business Analytics and Visualization Techniques
+                                            <input type="checkbox" name="is_name" value="Introduction_to_Business_Analytics_and_Visualization_Techniques" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">HR Analytics
+                                            <input type="checkbox"  name="is_name" value="HR_Analytics" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Marketing Analytics
+                                            <input type="checkbox"  name="is_name" value="Marketing_Analytics" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Operations Analytics
+                                            <input type="checkbox" name="is_name" value="Operations_Analytics" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Financial Analytics
+                                            <input type="checkbox"  name="is_name" value="Financial_Analytics" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Supply Chain Analytics
+                                            <input type="checkbox"  name="is_name" value="Supply_Chain_Analytics" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Introduction to Big data
+                                            <input type="checkbox" name="is_name" value="Introduction_to_Big_data" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Big Data modelling & Data Management Systems
+                                            <input type="checkbox"  name="is_name" value="Big_Data_modelling_Data_Management_Systems" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Big Data Integration & Processing
+                                            <input type="checkbox"  name="is_name" value="Big_Data_Integration_Processing" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Machine Learning with Big Data
+                                            <input type="checkbox" name="is_name" value="Machine_Learning_with_Big_Data" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Deep Learning for NLP
+                                            <input type="checkbox"  name="is_name" value="Deep_Learning_for_NLP" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Deep Learning for Computer Vision
+                                            <input type="checkbox"  name="is_name" value="Deep_Learning_for_Computer_Vision" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Machine Learning Production Deployment and Introduction to Explainable AI
+                                            <input type="checkbox"  name="is_name" value="Machine_Learning_Production_Deployment_and_Introduction_to_Explainable_AI" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">Introduction to Blockchain
+                                            <input type="checkbox"  name="is_name" value="Introduction_to_Blockchain" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="check ">I don't want to take classes, but I would like to be a referrer.
+                                            <input type="checkbox" name="is_name" value="Dont_want">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <button type="button" class="action-button">Done</button>
+                                    </form>
+                                </div>  
+                            <div id="totalPriceData1"></div>
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" id="rzp-button" value="Pay with Razorpay" />
+                            <!-- <input type="button"  value="Procced to Check out"/> -->
+                            
+
+
+                </fieldset>
+                <fieldset>
+                    <br><br>
+                    <h1 style="color:#45CE30"><strong>Registration Completed</strong></h1>
+                    <br><br><br>
+                </fieldset>
+            </form>
+            
+        </div>
+    </div>
+    <!-- /.MultiStep Form -->
+
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- firebase links -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+<!-- Rajor Pay -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                    
+
+<script src="js/app.js"></script>
+<script src="js/price.js"></script>
+</body> 
+</html>
