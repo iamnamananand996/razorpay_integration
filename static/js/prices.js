@@ -289,9 +289,8 @@ $(document).ready(function() {
 
 
         var options={ "key": "rzp_live_2Y0vFPKjcrrTIN", // Enter the Key ID generated from the Dashboard   
-                    "amount": 100, // INR 299.35    
-                    "name": "Acme Corp", 
-                    "description": "A Wild Sheep Chase is the third novel by Japanese author  Haruki Murakami",   
+                    "amount": totalPrice*100, // INR 299.35    
+                    "name": "Pucho",   
                     "handler": function (response){     
                         // alert("Your Order Id : "+response.razorpay_payment_id);
                         console.log('Your Order Id'+response.razorpay_payment_id);
