@@ -76,9 +76,9 @@ var course_prices_online_offiline = new Array();
 document.getElementById("rzp-button").style.display = "none";
 // $("#rzp-button1").hide();
 firebase.initializeApp({
-    apiKey: 'AIzaSyD5q9A-VTAknbDIu_ksQAsUbRw7Yv7fsks',
-    authDomain: 'pucho-47574.firebaseapp.com',
-    projectId: 'pucho-47574'
+    apiKey: 'firebase key',
+    authDomain: 'firebase domian',
+    projectId: 'firebase id'
 });
 
 var db = firebase.firestore();
@@ -288,7 +288,7 @@ $(document).ready(function() {
 //  Rajor pay implementation
 
 
-        var options={ "key": "rzp_live_2Y0vFPKjcrrTIN", // Enter the Key ID generated from the Dashboard   
+        var options={ "key": "razor pay key", // Enter the Key ID generated from the Dashboard   
                     "amount": totalPrice*100, // INR 299.35    
                     "name": "Pucho",   
                     "handler": function (response){     
